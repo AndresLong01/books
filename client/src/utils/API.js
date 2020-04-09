@@ -9,8 +9,6 @@ export default {
     },
     bookSearch: function(query){
         let search = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=20`
-        axios.get(search)
-          .then(res => res.data)
-          .catch(err => err)
+        return axios.get(search)
     }
 }
